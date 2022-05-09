@@ -74,6 +74,7 @@ public class Application {
             }   
         }
         //-----------------------------------------------------------
+        //generate random graph
         if(userChoice==2){
             
             System.out.println("---------Choose one of the Algorithms: ");
@@ -153,6 +154,7 @@ public class Application {
             
             
             if(algorithmNumber==1){
+                
                 long startTime = System.currentTimeMillis();
                 SingleSourceSPAlg dijkstra = new SingleSourceSPAlg(newGhraph);
                 dijkstra.computeDijkstraAlg();
@@ -161,8 +163,9 @@ public class Application {
                
             }
             else if(algorithmNumber==2){
+                
                 long startTime = System.currentTimeMillis();
-                 AllSourceSPAlg floyedWarshall = new AllSourceSPAlg(newGhraph);
+                AllSourceSPAlg floyedWarshall = new AllSourceSPAlg(newGhraph);
                 floyedWarshall.computeFloyedWarshallAlg();
                 long finishTime = System.currentTimeMillis();
                 System.out.println("taken time (floyd-warshall algorithm): " +(finishTime-startTime)+"ms");

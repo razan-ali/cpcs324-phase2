@@ -20,8 +20,6 @@ public class SingleSourceSPAlg extends ShortestPathAlgorithm{
      */
     String[] path;
     
-    
-    
     /**
      * 
      * @param graph graph input
