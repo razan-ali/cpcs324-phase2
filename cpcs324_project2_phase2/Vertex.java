@@ -40,6 +40,7 @@ public class Vertex {
     /**
      * 
      * method to get position of vertex
+     * @return  the position number
      */
     public int getVertPos(){
         return position;

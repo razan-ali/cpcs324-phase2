@@ -29,6 +29,14 @@ public class Edge{
         
     }
     /**
+     *  constructor
+     * @param weight  weight of edge
+     */
+    public Edge(int weight) {
+        this.weight = weight;
+    }
+    
+    /**
      * constructor with parameters
      * 
      * @param source source vertex of edge 

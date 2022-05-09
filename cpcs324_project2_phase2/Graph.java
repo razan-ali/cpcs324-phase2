@@ -107,12 +107,14 @@ public class Graph {
         }
         //replace null values withe infinity
         updateAllNullsValues();
+        System.out.println("jdssjknsjknsdjknbskjbns");
+        System.out.println(edgeNo);
            
     }//end of makeGraph method 
     /**
      * method that generate graph and read inputs from input file
      * @param inpuFilet that read graph from
-     * @throws java.io.FileNotFoundException
+     * @throws java.io.FileNotFoundException reading input file  
      */
     public void readFromFile(File inpuFilet) throws FileNotFoundException{
         Scanner input = new Scanner(inpuFilet);//scanner to read from file
@@ -138,7 +140,7 @@ public class Graph {
         }
         //replace null values withe infinity
         updateAllNullsValues();
-     
+        
     }
     
    
@@ -213,10 +215,10 @@ public class Graph {
             for (int j = 0; j < adjMatrix[i].length; j++) {
                 if( i==j && adjMatrix[i][j]==null)//if i==j 
                     //smallest distance (weight from the vertex to itself)
-                    adjMatrix[i][j] =  addEdge(i, j, 0); //alwayes by zero
+                    adjMatrix[i][j] =  new Edge(0);
                 
                 else if(adjMatrix[i][j] == null){ //if there is no edges 
-                    adjMatrix[i][j] = addEdge(i, j, 999999);   //set infinity(a number out of the range of wieghts)
+                    adjMatrix[i][j] = new Edge(999999);  //set infinity(a number out of the range of wieghts)
                 }//end of eles if
                        
             }//end of inner loop
