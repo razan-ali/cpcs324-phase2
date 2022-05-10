@@ -62,10 +62,10 @@ public class SingleSourceSPAlg extends ShortestPathAlgorithm{
             //Once the smallest is found
             graph.vertices[u].isVisited = true;//update isVisited to true
          
-
+           
             //Update the adjacent distances   
             for (int v = 0; v < graph.adjMatrix.length; v++) {
-              
+                
                 if (graph.vertices[v].isVisited != true && graph.adjMatrix[u][v].weight != infinity && graph.adjMatrix[u][v].weight != 0) {
                     //if the distance from this vertex to its adjacent smaller
                     if (smallestDistance[u] + graph.adjMatrix[u][v].weight < smallestDistance[v]) {
@@ -91,6 +91,7 @@ public class SingleSourceSPAlg extends ShortestPathAlgorithm{
         System.out.println("\n----- Dijkstra Algorithm -----");
         System.out.println("All the shortest distances from vertex 'A' to other vertices in graph");
         for (int i = 0; i < graph.verticesNo; i++) {
+            
             System.out.println("---> Shortest Distance from 'A' to '" + (char) (i + 65) + "' is " + smallestDistance[i] + ", the Path: " + path[i] + " " + (char) (i + 65) + " " + smallestDistance[i]);
         }
      

@@ -80,7 +80,7 @@ public class Graph {
         //to connect V vetex we ned V-1 edge 
         //be connected each vetex to the next vertex adjacent to it , we ensuring that graph is connected 
         for (int i = 1; i < totalNumberOfVertices  ; i++) {
-            int randomWeight = (int) (1 + Math.random() * 50); //first generate random wight to assign it to the edge 
+            int randomWeight = (int) (Math.random() * (50)) + 1;//first generate random wight to assign it to the edge 
             addEdge(i-1 ,i, randomWeight); //then add that edge graph]
                    
         } 
@@ -101,16 +101,15 @@ public class Graph {
                  continue;                                           //since the target will have the same edge too 
                
             }
-            int randomWeight = (int) (1 + Math.random() * 50);//generate randomWight 
+            int randomWeight = (int) (Math.random() * (50)) + 1;//generate randomWight 
             addEdge(sourceLable, targetLabel, randomWeight); //add the edge to the graph 
          
         }
         //replace null values withe infinity
-        updateAllNullsValues();
-        System.out.println("jdssjknsjknsdjknbskjbns");
-        System.out.println(edgeNo);
-           
+        updateAllNullsValues();    
+        
     }//end of makeGraph method 
+    
     /**
      * method that generate graph and read inputs from input file
      * @param inpuFilet that read graph from
